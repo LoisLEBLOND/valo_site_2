@@ -53,7 +53,7 @@ header{
 header > a,
 header button {
     color: #ffffff;
-    margin: 0 15px;
+    margin: 0 22px;
 }
 
 header button {
@@ -74,6 +74,10 @@ header a:hover {
 
 header .dropdown .content{
     display: none;
+    z-index: 2000;
+    height: auto;
+    min-width: 180px;
+    
 }
 
 header .dropdown:hover .content{
@@ -89,9 +93,39 @@ header .dropdown:hover .content{
     width: 180px;
     box-sizing: border-box;
     color: #ffffff;
+    z-index: 2000;
 }
 
-a{
+header div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header li{
+    padding: 6px 0;
+    line-height: normal;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header a{
     color: #ffffff;
     text-decoration: none;
+}
+
+.background-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 76.5%;
+    height: 90%;
+    object-fit: cover;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11%;
 }
