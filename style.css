@@ -46,7 +46,6 @@ header{
     display: flex;
     align-items: center;
     background-color: #111111;
-    border-bottom: 2px solid #1a1a1a;
     z-index: 1000;
 }
 
@@ -117,7 +116,7 @@ header a{
 }
 
 .background-video{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 76.5%;
@@ -131,7 +130,6 @@ header a{
 }
 
 .on-video-fade{
-    position: fixed;
     top: 0;
     left: 0;
     width: 76.5%;
@@ -144,7 +142,7 @@ header a{
     margin-left: 11.5%;
 }
 
-.on-video-text {
+.on-container-text {
     position: absolute;
     top: 45%;
     left: 50%;
@@ -158,6 +156,7 @@ header a{
 }
 
 .on-video-button {
+    position: block;
     position: absolute;
     top: 53%;
     left: 49%;
@@ -173,4 +172,21 @@ header a{
     width: 240px;
     height: 80px;
     text-align: center;
+}
+
+.inter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ece8e1;
+    width: 76.5%;
+    height: 670px;
+    margin-left: 11.5%;
+    margin-top: 46.2%;
+
+}
+
+.inter-container a{
+    color: black;
 }
