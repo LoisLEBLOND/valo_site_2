@@ -352,3 +352,39 @@ header a{
     width: 77%;
     margin-left: 11.5%;
 }
+
+.game-info-div video {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    margin-left: 52%;
+    margin-top: -90%;
+}
+
+.game-info-div .game-info-text-container {
+    text-align: start;
+}
+
+.game-info-div .game-info-text-container p {
+    font-size: 90px;
+    font-family: 'Anton', sans-serif;
+}
+
+.game-info-div .game-info-button {
+    background-color: #ff4655;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1;
+    font-family: 'Roboto Slab', sans-serif;
+    width: 235px;
+    height: 65px;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.game-info-div .game-info-button:hover {
+    background-color: #000000;
+    transition: background-color 0.5s ease;
+}
