@@ -431,3 +431,106 @@ header a{
     color: #000000;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
+
+.maps-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60vh;
+    width: 77%;
+    margin-left: 11.5%;
+    background-image: url('images/maps-div.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.maps-div .maps-div-text-container {
+    color: #000000;
+}
+
+.maps-div .maps-div-text-container p {
+    font-size: 90px;
+    font-family: 'Anton', sans-serif;
+    margin-left: 32%;
+}
+
+.maps-div .maps-div-button {
+    background-color: #ff4655;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1;
+    font-family: 'Roboto Slab', sans-serif;
+    width: 10vw;
+    height: 4.8vh;
+    text-align: center;
+    margin-top: 2vh;
+    margin-left: 32%;
+}
+
+.maps-div .maps-div-button:hover {
+    background-color: #000000;
+    transition: background-color 0.5s ease;
+}
+
+.footer-1 {
+    background-color: #292929;
+    color: #ffffff;
+    text-align: center;
+    padding: 1vh 0;
+    border-top: 1.6px solid #343434;
+}
+
+.footer-1 .footer-1-button {
+    background-color: #292929;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+    width: 15vw;
+    text-align: center;
+}
+
+.footer-1 .footer-1-button:hover {
+    background-color: #444444;
+    transition: background-color 0.5s ease;
+}
+
+.footer-2 {
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 16.5vh 0;
+}
+
+.footer-2 .footer-2-icons-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-2 .footer-2-icons-div .icons-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828;
+    border-radius: 30%;
+}
+
+.footer-2 .footer-2-icons-div .icons-container .icons {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin: 7.5px;
+
+}
