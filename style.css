@@ -1,4 +1,9 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
@@ -15,37 +20,34 @@ body {
     overflow-x: hidden;
 }
 
-body > div {
-    width: 100%;
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.anton-regular{
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-slab{
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.roboto-slab {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.oswald{
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-header{
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -57,43 +59,49 @@ header{
     z-index: 1000;
 }
 
-header > a,
-header button {
+nav>a,
+nav button {
     color: #ffffff;
     margin: 0 22px;
 }
 
-header button {
+nav button {
     background: transparent;
     border: none;
     cursor: pointer;
     outline: none;
 }
 
-header .linkbtn:hover {
-    color:#ff4655;
+nav .linkbtn:hover {
+    color: #ff4655;
 }
 
-header a:hover {
+nav a:hover {
     border-bottom: 4px solid #ff4655;
     border-radius: 90px 3px 3px 3px;
 }
 
-header .dropdown .content{
+nav .dropdown .content {
     display: none;
     z-index: 2000;
     height: auto;
     min-width: 180px;
-    
+
 }
 
-header .dropdown:hover .content{
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+nav .dropdown:hover .content {
     display: block;
     display: flex;
     flex-direction: column;
     position: absolute;
     background-color: #292929;
-    top : 70px;
+    top: 70px;
     border-top: 4px solid #ff4655;
     border-radius: 3px 3px 1px 1px;
     padding: 15px 25px;
@@ -103,35 +111,36 @@ header .dropdown:hover .content{
     z-index: 2000;
 }
 
-header div{
+nav div {
     height: 100%;
     display: flex;
 }
 
-body > div:nth-child(1) {
+/* 
+body>div:nth-child(1) {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
     z-index: 1000;
-}
+} */
 
-body > div:nth-child(2) {
+/* body>div:nth-child(2) {
     width: 100%;
     position: relative;
     height: 100vh;
     margin-top: -80px;
     padding-top: 80px;
-}
-
-body > div:nth-child(2) > div {
+} */
+/* 
+body>div:nth-child(2)>div {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-body > div:nth-child(3) {
+body>div:nth-child(3) {
     width: 77%;
     margin-left: 11.5%;
     display: flex;
@@ -139,47 +148,55 @@ body > div:nth-child(3) {
     align-items: center;
     flex-direction: column;
     margin-top: -209px;
-}
+} */
 
-header li{
+nav li {
     padding: 6px 0;
     line-height: normal;
 }
 
-header ul {
-  list-style-type: none;
+nav ul {
+    list-style-type: none;
 }
 
-header a{
+nav a {
     color: #ffffff;
     text-decoration: none;
 }
 
-.background-video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 77%;
-    height: 90%;
+.background-video {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
     object-fit: cover;
     z-index: -2;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 11.5%;
 }
 
-.on-video-fade{
+.on-video-content {
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: -webkit-center
+}
+
+.on-video-fade {
     position: absolute;
     top: 0;
     left: 0;
-    width: 77%;
+    width: 100%;
     height: 90%;
     background: linear-gradient(to bottom, rgba(26, 36, 46, 0.3), rgba(26, 36, 46, 0.7));
     z-index: -1;
     display: flex;
     object-fit: cover;
-    margin-left: 11.5%;
 }
 
 .on-container-text {
@@ -197,10 +214,6 @@ header a{
 
 .on-video-button {
     position: block;
-    position: absolute;
-    top: 53%;
-    left: 49%;
-    transform: translate(-50%, -50%);
     background-color: #ff4655;
     color: #ffffff;
     border: 2px solid #ffffff;
@@ -221,16 +234,15 @@ header a{
 }
 
 .inter-container {
-    width: 100%;
-    height: 665px;
+    width: 100vw;
     display: flex;
+    background-color: white;
     justify-content: center;
     align-items: center;
-    margin-left: 0;
     background-color: #ece8e1;
 }
 
-.inter-container .on-container-text{
+.inter-container .on-container-text {
     display: flex;
     top: auto;
     transform: none;
@@ -239,8 +251,6 @@ header a{
     justify-content: flex-start;
     align-items: flex-start;
     z-index: auto;
-    top: 88%;
-    left: 20%;
     font-family: 'Anton', sans-serif;
 }
 
@@ -254,23 +264,58 @@ header a{
     color: #000000;
 }
 
-.inter-container a{
+.inter-container a {
     color: black;
 }
 
 .actus-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
-.actus-item {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
+.actus-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.actus-images {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.actus-meta {
+    font-size: 16px;
+    margin-top: 10px
+}
+
+.actus-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.actus-desc {
+    font-size: 17px;
+    color: #0f1923;
+}
+
+@media (max-width: 1024px) {
+    .actus-div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .actus-div {
+        grid-template-columns: 1fr;
+    }
 }
 
 .actus-div .actus-images {
@@ -299,11 +344,6 @@ header a{
         transform: none;
         left: auto;
         top: auto;
-    }
-
-    body > div:nth-child(3) {
-        width: 90%;
-        margin-left: 5%;
     }
 }
 
@@ -508,7 +548,7 @@ header a{
     height: 32vh;
 }
 
-.footer-2 .footer-2-icons-div{
+.footer-2 .footer-2-icons-div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -559,11 +599,11 @@ header a{
     fill: #ffffff;
 }
 
-.footer-2 .footer-2-links-div .riot-logo a svg:hover{
+.footer-2 .footer-2-links-div .riot-logo a svg:hover {
     fill: #ffffff;
 }
 
-.footer-2 .footer-2-button{
+.footer-2 .footer-2-button {
     background-color: #111111;
     color: #ffffff;
     border: none;
@@ -591,7 +631,7 @@ header a{
     transition: background-color 0.3s ease;
 }
 
-.footer-2 .footer-2-legal-div .footer-2-list{
+.footer-2 .footer-2-legal-div .footer-2-list {
     list-style: none;
     margin: 0;
     padding: 0;
