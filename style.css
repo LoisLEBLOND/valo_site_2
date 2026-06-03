@@ -456,8 +456,8 @@ nav a {
     cursor: pointer;
     z-index: 1;
     font-family: 'Roboto Slab', sans-serif;
-    width: 10vw;
-    height: 4.8vh;
+    width: 16vw;
+    height: 7.8vh;
     text-align: center;
     margin-top: 2vh;
     margin-left: 15%;
@@ -498,8 +498,8 @@ nav a {
     cursor: pointer;
     z-index: 1;
     font-family: 'Roboto Slab', sans-serif;
-    width: 10vw;
-    height: 4.8vh;
+    width: 18vw;
+    height: 7.8vh;
     text-align: center;
     margin-top: 2vh;
     margin-left: 32%;
@@ -541,6 +541,7 @@ nav a {
     background-color: #111111;
     color: #ffffff;
     text-align: center;
+    width: 100%;
     height: 32vh;
 }
 
@@ -690,6 +691,7 @@ nav a {
 @media (max-width: 900px) {
     .hamburger {
         display: flex;
+        justify-content: flex-start;
     }
 
     .nav-links {
