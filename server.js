@@ -1,5 +1,6 @@
-require("dotenv").config();
+//!!!!! ATTENTION, LANCE LE SERVER AVEC la commande 'node server.js' avant d'essayer d'appeller les endpoints !!!!!// 
 
+require("dotenv").config();
 const express = require("express");
 const mariadb = require("mariadb");
 const cors = require("cors");
@@ -18,6 +19,7 @@ const pool = mariadb.createPool({
     connectionLimit: 5
 });
 
+
 // Endpoint pour récupérer tous les utilisateurs
 app.get("/getActualUser", async (req, res) => {
     let conn;
@@ -31,6 +33,31 @@ app.get("/getActualUser", async (req, res) => {
         res.json(rows);
     } catch (err) {
         console.error(err);
+        res.status(500).json({ error: err.message });
+    } finally {
+        if (conn) conn.release();
+    }
+});
+
+app.post("/registerUser", async (req, res) => {
+    const { nom, email } = req.body;
+
+    let conn;
+
+    try {
+        conn = await pool.getConnection();
+
+        const result = await conn.query(
+            "INSERT INTO utilisateurs (nom, email) VALUES (?, ?)",
+            [nom, email]
+        );
+
+        res.json({
+            success: true,
+            message: "Utilisateur enregistré avec succès",
+        });
+
+    } catch (err) {
         res.status(500).json({ error: err.message });
     } finally {
         if (conn) conn.release();
