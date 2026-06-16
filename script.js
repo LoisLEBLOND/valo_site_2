@@ -33,3 +33,11 @@ const navLinks = document.getElementById('nav-links');
 hamburger && hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('open');
 });
+
+const connexionButton = document.getElementById('connexion-button');
+const formulaireCard = document.querySelector('.formulaire-card');
+
+connexionButton && connexionButton.addEventListener('click', () => {
+    const isVisible = formulaireCard.style.display === 'flex';
+    formulaireCard.style.display = isVisible ? 'none' : 'flex';
+});

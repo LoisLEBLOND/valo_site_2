@@ -541,7 +541,9 @@ nav a {
     color: #ffffff;
     text-align: center;
     width: 100%;
-    height: 32vh;
+    height: auto;
+    min-height: 32vh;
+    padding-bottom: 20px;
 }
 
 .footer-2 .footer-2-icons-div {
@@ -662,6 +664,25 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
+.footer-2 .footer-2-legal-div .footer-2-list:has(+ .footer-2-legal-div) {
+    margin-bottom: 0;
+}
+
+.footer-2 .footer-2-legal-div .footer-2-legal-div {
+    margin-top: 1vh;
+    color: #707070;
+}
+
+.footer-2 .footer-2-legal-div .footer-2-legal-div .footer-2-list {
+    gap: 20px;
+}
+
+.footer-2 .footer-2-legal-div .footer-2-legal-div .footer-2-list li img {
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -741,7 +762,7 @@ nav a {
 }
 
 .formulaire-card {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -751,7 +772,7 @@ nav a {
     height: auto;
     margin: 0 auto;
     padding: 20px;
-    background-color: #111111;
+    background-color: #1e1e1e;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1001;
@@ -790,7 +811,7 @@ nav a {
 }
 
 .formulaire-card .submit-button {
-    background-color: #3ab3d8;
+    background-color: #ff4655;
     color: #ffffff;
     border: none;
     border-radius: 4px;
