@@ -153,6 +153,15 @@
                 GRATUITEMENT</button>
         </div>
     </header>
+    <div class="formulaire-card">
+        <form action="/registerUser" method="POST" class="formulaire">
+            <label class="formulaire-text" for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <label class="formulaire-text" for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            <button class="submit-button" type="submit">Se connecter</button>
+        </form>
+    </div>
     <section class="inter-container">
         <div style="margin:0 5% ;margin-top:30px">
 
@@ -386,21 +395,6 @@
             </div>
         </div>
     </div>
-    <!--<div class="formulaire-card">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Envoyer</button>
-        </form>
-    </div>-->
 </body>
 
 <script src="./script.js" defer></script>
