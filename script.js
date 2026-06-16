@@ -41,3 +41,14 @@ connexionButton && connexionButton.addEventListener('click', () => {
     const isVisible = formulaireCard.style.display === 'flex';
     formulaireCard.style.display = isVisible ? 'none' : 'flex';
 });
+
+const registerForm = document.getElementById('register-form');
+registerForm && registerForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const nom = document.getElementById('nom').value;
+    const email = document.getElementById('email').value;
+
+    await handleRegisterUser(nom, email);
+    console.log("Formulaire soumis :", { nom, email });
+});
