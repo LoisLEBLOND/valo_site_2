@@ -822,3 +822,28 @@ nav a {
     width: 35%;
     margin-left: 32.5%;
 }
+
+.formulaire-card .formulaire-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.formulaire-card p.formulaire-text {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+.formulaire-card #toggle-mode-link {
+    color: #ff4655;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.formulaire-card #logout-button {
+    width: 60%;
+    margin: 10px auto 0;
+}

@@ -149,18 +149,24 @@
             <img src="public/images/valo_title.png" alt="VALORANT Title"></img>
             <h1 style="margin: 20px">VALORANT — UN JEU DE TIR TACTIQUE EN 5C5 AVEC DES AGENTS AUX COMPÉTENCES UNIQUES
             </h1>
-            <button onclick="handleRegisterUser('formulaire de co2', 'johni.doe@co.com')" class="on-video-button">JOUEZ
+            <button id="play-button" class="on-video-button">JOUEZ
                 GRATUITEMENT</button>
         </div>
     </header>
     <div class="formulaire-card">
-        <form id="register-form" action="/registerUser" method="POST" class="formulaire">
+        <h1 class="formulaire-title" id="formulaire-titre">Inscription</h1>
+        <form id="auth-form" class="formulaire">
             <label class="formulaire-text" for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>
             <label class="formulaire-text" for="email">Email :</label>
             <input type="email" id="email" name="email" required>
-            <button class="submit-button" type="submit">Se connecter</button>
+            <button class="submit-button" type="submit" id="submit-button">S'inscrire</button>
         </form>
+        <p class="formulaire-text">
+            <span id="toggle-mode-text">Déjà inscrit ?</span>
+            <a href="#" id="toggle-mode-link">Se connecter</a>
+        </p>
+        <button class="submit-button" id="logout-button" style="display:none;">Se déconnecter</button>
     </div>
     <section class="inter-container">
         <div style="margin:0 5% ;margin-top:30px">

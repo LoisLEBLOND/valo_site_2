@@ -19,8 +19,6 @@ const pool = mariadb.createPool({
     connectionLimit: 5
 });
 
-
-// Endpoint pour récupérer tous les utilisateurs
 app.get("/getActualUser", async (req, res) => {
     let conn;
     try {
@@ -55,6 +53,39 @@ app.post("/registerUser", async (req, res) => {
         res.json({
             success: true,
             message: "Utilisateur enregistré avec succès",
+        });
+
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    } finally {
+        if (conn) conn.release();
+    }
+});
+
+app.post("/loginUser", async (req, res) => {
+    const { nom, email } = req.body;
+
+    let conn;
+
+    try {
+        conn = await pool.getConnection();
+
+        const rows = await conn.query(
+            "SELECT id, nom, email FROM utilisateurs WHERE nom = ? AND email = ?",
+            [nom, email]
+        );
+
+        if (rows.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "Utilisateur non trouvé"
+            });
+        }
+
+        res.json({
+            success: true,
+            message: "Connexion réussie",
+            user: rows[0]
         });
 
     } catch (err) {
